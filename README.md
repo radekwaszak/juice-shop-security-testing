@@ -14,7 +14,61 @@ To run the security tests, you will need to install the following tools:
   - `zapv2`: The official OWASP ZAP Python client.
   - `python-dotenv`: To load the ZAP API key securely from a `.env` file.
 
-  To install the required Python packages, run:
+To install the required Python packages, run:
 
   ```bash
   pip install -r requirements.txt
+  ```
+### 2. Securely Store API Key
+
+To securely store your ZAP API key, follow these steps:
+
+  1. Create a .env file in the root of your project directory and add your ZAP API key:
+
+  `ZAP_API_KEY=your_zap_api_key_here`
+
+  2. Ensure .env is added to `.gitignore to keep the API key safe:
+
+  `.env`
+
+  3. The Python script will use the python-dotenv package to load the API key from the .env file.
+
+### 3. Run the Script
+
+  1. Configure the ZAP API key: The script will automatically read the API key from the .env file.
+
+  2. Execute the script: Run the Python script zap_script.py to start the security testing:
+
+  ```bash
+  python zap_script.py
+  ```
+  This will:
+    - Launch a spider scan on the Zero Web App Security site.
+    - Perform an active scan to identify vulnerabilities.
+    - Generate an HTML security report.
+
+### 4. Report Generation
+
+The security report will be generated in HTML format. After running the script, you can find the generated report in the reports folder as security_report.html.
+
+Note: To view the report:
+  - Download the raw file from GitHub and open it in a web browser.
+  - Alternatively, you can host the report on GitHub Pages or open it in a local browser using the Live Server extension in VS Code.
+
+### 5. Future Improvements
+  - Automate the process: You could schedule this security testing process to run periodically.
+  - Add more tests: Extend the testing suite to include additional security checks such as SQL injection, XSS, etc.
+  - Integrate with CI/CD pipelines: Automate security testing within your continuous integration pipeline.
+
+## Project Structure
+
+```bash
+.
+├── zap_script.py       # Main script to run the ZAP scans
+├── .env                # Stores ZAP API key securely
+├── .gitignore          # Prevents .env and other sensitive files from being pushed
+├── requirements.txt    # Python dependencies
+└── reports/            # Directory to store generated security reports
+    └── security_report.html
+
+
