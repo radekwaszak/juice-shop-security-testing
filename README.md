@@ -11,45 +11,53 @@ To run the security tests, you will need to install the following tools:
 - **OWASP ZAP**: The main tool for security testing. You can download it from the [official OWASP ZAP website](https://www.zaproxy.org/download/).
 - **Python 3**: The script is written in Python 3. You can download it from the [official Python website](https://www.python.org/downloads/).
 - **Required Python Packages**:
+  
   - `zapv2`: The official OWASP ZAP Python client.
   - `python-dotenv`: To load the ZAP API key securely from a `.env` file.
 
 To install the required Python packages, run:
 
-  ```bash
+  ```
   pip install -r requirements.txt
   ```
+
 ### 2. Securely Store API Key
 
 To securely store your ZAP API key, follow these steps:
 
   1. Create a .env file in the root of your project directory and add your ZAP API key:
 
-  `ZAP_API_KEY=your_zap_api_key_here`
+  ```
+  ZAP_API_KEY=your_zap_api_key_here
+  ```
+ 
+  2. Ensure .env is added to `.gitignore` to keep the API key safe:
 
-  2. Ensure .env is added to `.gitignore to keep the API key safe:
+  ```
+  .env
+  ```
 
-  `.env`
-
-  3. The Python script will use the python-dotenv package to load the API key from the .env file.
+  3. The Python script will use the python-dotenv package to load the API key from the `.env` file.
 
 ### 3. Run the Script
 
-  1. Configure the ZAP API key: The script will automatically read the API key from the .env file.
+  1. Configure the ZAP API key: The script will automatically read the API key from the `.env` file.
 
-  2. Execute the script: Run the Python script zap_script.py to start the security testing:
+  2. Execute the script: Run the Python script `zap_script.py` to start the security testing:
 
-  ```bash
+  ```
   python zap_script.py
   ```
+
   This will:
+  
     - Launch a spider scan on the Zero Web App Security site.
     - Perform an active scan to identify vulnerabilities.
     - Generate an HTML security report.
 
 ### 4. Report Generation
 
-The security report will be generated in HTML format. After running the script, you can find the generated report in the reports folder as security_report.html.
+The security report will be generated in HTML format. After running the script, you can find the generated report in the reports folder as `security_report.html`.
 
 Note: To view the report:
   - Download the raw file from GitHub and open it in a web browser.
@@ -62,7 +70,7 @@ Note: To view the report:
 
 ## Project Structure
 
-```bash
+```
 .
 ├── zap_script.py       # Main script to run the ZAP scans
 ├── .env                # Stores ZAP API key securely
