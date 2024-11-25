@@ -1,4 +1,5 @@
 selenium
 pytest
 requests
-zapv2
+python-owasp-zap-v2.4
+python-dotenv
