@@ -78,5 +78,21 @@ Note: To view the report:
 ├── requirements.txt    # Python dependencies
 └── reports/            # Directory to store generated security reports
     └── security_report.html
+```
 
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+### **Explanation of the Sections:**
+
+  - **Project Setup**: Instructions for installing required tools and libraries.
+  - **Secure API Key Storage**: Instructions on how to securely store and load the ZAP API key.
+  - **Running the Script**: Instructions for executing the script to run the security tests and generate the report.
+  - **Report Generation**: Details on where to find the report and how to view it.
+  - **Future Improvements**: Ideas for enhancing the project.
+  - **Project Structure**: Directory structure for clarity.
+  - **License**: Mention of the MIT license (you can update this if you're using a different license).
+
+This README file should provide clear instructions for anyone using the repository and following along with the project. Let me know if you need more details or adjustments!
 
