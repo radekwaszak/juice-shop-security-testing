@@ -1,6 +1,6 @@
 # Zero Web App Security - Security Testing Project
 
-This project performs security testing on the **Zero Web App Security** website using the **OWASP ZAP** (Zed Attack Proxy) tool. The goal of the project is to identify security vulnerabilities in the web application through automated scans, including spidering and active scanning.
+This project performs security testing on the [**Zero Web App Security** website](http://zero.webappsecurity.com/index.html) using the **OWASP ZAP** (Zed Attack Proxy) tool. The goal of the project is to identify security vulnerabilities in the web application through automated scans, including spidering and active scanning.
 
 ## Project Setup
 
