@@ -82,7 +82,7 @@ Note: To view the report:
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE file](https://github.com/radekwaszak/zero-webapp-security-tests/blob/main/LICENSE) for details.
 
 ### **Explanation of the Sections:**
 
